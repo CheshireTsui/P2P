@@ -92,7 +92,6 @@ STATICFILES_DIRS = (
     ("imgs", os.path.join(STATIC_ROOT,'imgs')),
     ("css", os.path.join(STATIC_ROOT,'css')),
     ("js", os.path.join(STATIC_ROOT,'js')),
-    ("xadmin", os.path.join(STATIC_ROOT,'xadmin')),
     ("media", os.path.join(STATIC_ROOT,'media')),
 )
 MEDIA_URL  = '/media/'
