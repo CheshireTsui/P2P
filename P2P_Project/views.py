@@ -4,4 +4,4 @@ from django.shortcuts import render, render_to_response, get_object_or_404
 import json
 
 def home(request):
-    return HttpResponse("Hi, I'm back!")
+    return render_to_response("index.html")

@@ -9,4 +9,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^$', 'P2P_Project.views.home', name='home'),
+    url(r'upload/', 'upload_Page.views.upload', name='upload'),
 )

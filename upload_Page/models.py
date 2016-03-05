@@ -21,18 +21,19 @@ class ExcelFile(models.Model):
         if sheet.nrows:
             for i in range(sheet.nrows):
                 tmp = [str(x) for x in sheet.row(i)]
-                print list(tmp)
+                # print list(tmp)
                 tmp_row = Rows()
                 tmp_row.content = json.dumps(tmp)
                 tmp_row.belong_to = self
                 tmp_row.save()
 
     def save(self, *args, **kwargs):
+        # super(ExcelFile, self).save(*args, **kwargs)
+        if not self.name:
+            print self.file.name
+            self.name = self.file.name
         super(ExcelFile, self).save(*args, **kwargs)
         self.save_contents()
-        if not self.name:
-            self.name = self.file.get_filename()
-        super(ExcelFile, self).save(*args, **kwargs)
 
 
 class Rows(models.Model):
