@@ -13,6 +13,24 @@
     <h2>aka</h2>
     <h1>P2P Project</h1>
     <h5>Pre Alpha V0.3</h5>
+</div>
+<div>
+	<table border="1" style="width: 80%;margin-left: 10%;text-align: center;">
+		<tr>
+			<td>Name</td>
+			<td>View the Sheet</td>
+			<td>Size</td>
+			<td>Upload Time</td>
+		</tr>
+		{% for i in ls %}
+		<tr>
+			<td><a href="{{ i.file.url }}">{{ i.name }}</a></td>
+			<td><a href="/show?num={{ i.id }}">View This Sheet</a></td>
+			<td><p>{% widthratio i.file.size 1000 1 %}kb</p></td>
+			<td><p>{{ i.upload_time }}</p></td>
+		</tr>
+		{% endfor %}
+	</table>
     <a href="/upload"><img src="/static/imgs/btn.bmp" id="btn"></a>
 </div>
 </body>

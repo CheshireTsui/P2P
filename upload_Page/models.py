@@ -6,7 +6,7 @@ import json, time, xlrd, xlwt
 class ExcelFile(models.Model):
     name = models.CharField(max_length=40, blank=True)
     file = models.FileField(upload_to='meida/')
-    upload_time = models.TimeField(auto_now=True)
+    upload_time = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = u"Excel File"
