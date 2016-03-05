@@ -10,4 +10,5 @@ urlpatterns = patterns('',
 
     url(r'^$', 'P2P_Project.views.home', name='home'),
     url(r'upload/', 'upload_Page.views.upload', name='upload'),
+    url(r'show/', 'show_Page.views.show', name='show'),
 )

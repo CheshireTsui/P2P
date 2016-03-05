@@ -12,5 +12,15 @@
     <h1>P2P Project</h1>
     <h5>Pre Alpha V0.3</h5>
 </div>
+	<h2>{{ name }}</h2>
+	<table border="1">
+		{% for i in rows %}
+		<tr>
+			{% for j in i %}
+			<th>{{ j }}</th>
+			{% endfor %}
+		</tr>		
+		{% endfor %}
+	</table>
 </body>
 </html>

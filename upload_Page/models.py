@@ -20,7 +20,7 @@ class ExcelFile(models.Model):
         sheet = file.sheets()[0]
         if sheet.nrows:
             for i in range(sheet.nrows):
-                tmp = [str(x) for x in sheet.row(i)]
+                tmp = [x.value for x in sheet.row(i)]
                 # print list(tmp)
                 tmp_row = Rows()
                 tmp_row.content = json.dumps(tmp)
